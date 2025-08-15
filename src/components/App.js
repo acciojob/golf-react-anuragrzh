@@ -14,14 +14,14 @@ class App extends Component {
     };
     moveBall() {
         this.setState((prevState) => {
-            const newPosition = prevState.posi + 10;
+            const newPosition = prevState.posi + 5;
             return {
                 posi: newPosition,
                 ballPosition: { left: `${newPosition}px` }
             };
         });
     }
-    
+
 
     buttonClickHandler() {
         this.setState({ renderBall: true });
@@ -48,7 +48,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="playground">
+            <div className="start">
                 {this.renderBallOrButton()}
             </div>
         )
